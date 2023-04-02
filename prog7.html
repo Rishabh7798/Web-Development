@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weight Converter</title>
+        <style>
+            span{
+                color: Green;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 style="color: rgb(34, 170, 0);"><u>Weight Converter</u></h2>
+        <p>Enter a value in the Kilograms field to convert :</p>
+        <p>
+            <label>Kilograms</label>
+            <input id="Kilograms" type="number" placeholder="kilograms" oninput="kiloweightConvert(this.value)" onchange="kiloweightConvert(this.value)" />
+        </p>
+        <p>Pounds: <span id="Pounds"></span></p>
+        <p>Ounces: <span id="Ounces"></span></p>
+        <p>Grams: <span id="Grams"></span></p>
+        <p>Stones: <span id="Stones"></span></p>
+        <script>
+            function kiloweightConvert(value){
+                document.getElementById("Pounds").innerHTML = value * 2.2046;
+                document.getElementById("Ounces").innerHTML = value * 35.274;
+                document.getElementById("Grams").innerHTML = value * 1000;
+                document.getElementById("Stones").innerHTML = value * 0.1574;
+            }
+        </script>
+    </body>
+</html> 

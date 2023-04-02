@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Patient Registration Form</title>
+        <style>
+            body{
+                background-color: rgb(165, 81, 12);
+                font-family: Verdana, Geneva, Tahoma, sans-serif; 
+                text-align: center;
+            }
+            form{
+                background-color: white;
+                max-width: 500px;
+                margin: 50px auto;
+                padding: 30px 20px;
+                box-shadow: 2px 5px 10px rgb(0, 0, 0, 0.5);
+            }
+            .form-control{
+                text-align: left;
+                margin-bottom: 2px;
+            }
+            .form-control input[type="checkbox"]{
+                display: inline-block;
+                width: auto;
+            }
+            .form-control input[type="checkbox"]{
+                display: inline-block;
+                width: auto;
+            }
+            button{
+                background: #B9DFFF;
+                color: #fff;
+                border: 1px solid #eee;
+                border-radius: 20px;
+                box-shadow: 5px 5px 5px #eee;
+                text-shadow: none;
+            }
+            button:hover{
+                background: #016ABC;
+                color: #fff;
+                border: 1px solid #eee;
+                border-radius: 20px;
+                box-shadow: 5px 5px 5px #eee;
+                text-shadow: none;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/action_page.php">
+            <header>
+                <h1><u>Patient's General Information</u></h1>
+            </header>
+            <hr>
+            <main>
+                <div class="form-control">
+                    <h3>Patient Gender</h3>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="other" value="other">
+                    <label for="other">other</label>
+                </div>
+                <div class="form-control">
+                    <h3>Patient Name</h3>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br>
+                </div>
+                <div class="form-control">
+                    <h3>Adhar card Number:</h3>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="form-group">
+                    <label for="card_number">Card Number</label>
+                    <input id="card_number" class="form-control" required pattern="(\d{4}\s?){4}" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226; &#8226;&#8226;&#8226;&#8226;" maxlength="19">
+                </div>
+            </div>
+        </div>
+        <div class="form-control">
+            <label for="phone">
+                <h3>Phone number:</h3>
+            </label>
+            <input type="tel" placeholder="Enter phone number" />
+        </div>
+        <div class="form-control">
+            <label for="email" id="label-email">
+                <h3>Patient E-mail</h3>
+            </label>
+            <input type="email" id="email" placeholder="ex:myname@example.com">
+        </div>
+        <div class="form-control ">
+            <h3>Patient Brith Date</h3>
+            <input type="date" name="bdate" />
+        </div>
+        <div class="form-control">
+            <label for="height" id="label-height">
+                <h3>Patient height(cm's)</h3>
+            </label>
+            <input type="text" id="height " placeholder="Enter your height ">
+        </div>
+        <div class="form-control">
+            <label for="weight" id="label-weight">
+                <h3>Patient weight(Kg's)</h3>
+            </label>
+            <input type="text" id="weight " placeholder="Enter your weight ">
+        </div>
+        <div class="form-control">
+            <label for="Reson">
+                <h3>Reason for seeing the doctor: </h3>
+            </label>
+            <textarea name="Reason" id="Reason"></textarea>
+        </div>
+        <br>
+        <hr>
+        <h1><u>Patient's Medical History</u></h1>
+        <hr>
+        <br>
+        <div class="form-control">
+            <label for="Reson">
+                <h3>Patient Medical history</h3>
+            </label>
+            <textarea name="Reason" rows="10" cols="50" id="History"></textarea>
+        </div>
+        <div class="form-control ">
+            <label>
+                <h3>Have you ever had(Please Check all that apply)</h3>
+            </label>
+<!-- Input Type Checkbox -->
+<label for="inp-1"></label>
+<input type="checkbox" name="inp">Anemia</input><br>
+<label for="inp-2">
+<input type="checkbox" name="inp">Asthma</input></label><br>
+<label for="inp-3">
+<input type="checkbox" name="inp">Arthritis</input></label><br>
+<label for="inp-4">
+<input type="checkbox" name="inp">Cancer</input></label><br>
+<label for="inp-5">
+<input type="checkbox" name="inp">Diabetes</input></label><br>
+<label for="inp-6">
+<input type="checkbox" name="inp">Emotional Disorder</input></label><br>
+<label for="inp-7">
+<input type="checkbox" name="inp">Epilepsy seizures</input></label><br>
+<label for="inp-8">
+<input type="checkbox" name="inp">Fainting Spells</input></label><br>
+<label for="inp-9">
+<input type="checkbox" name="inp">Gallstones</input></label><br>
+<label for="inp-10">
+<input type="checkbox" name="inp">Heart disease</input></label><br>
+<label for="inp-11">
+<input type="checkbox" name="inp">Heart Attack</input></label><br>
+<label for="inp-12">
+<input type="checkbox" name="inp">Rheumatic Fever</input></label><br>
+<label for="inp-13">
+<input type="checkbox" name="inp">High Blood pressure</input></label><br>
+<label for="inp-14">
+<input type="checkbox" name="inp">Digestive problem</input></label><br>
+<label for="inp-15">
+<input type="checkbox" name="inp">Ulcerative Colitis</input></label><br>
+<label for="inp-16">
+<input type="checkbox" name="inp">Ulcer Disease</input></label><br>
+<label for="inp-17">
+<input type="checkbox" name="inp">Hepatitis</input></label><br>
+<label for="inp-18">
+<input type="checkbox" name="inp">Kidney Disease</input></label><br>
+<label for="inp-19">
+<input type="checkbox" name="inp">Liver Disease</input></label><br>
+<label for="inp-20">
+<input type="checkbox" name="inp">Sleep Apnea</input></label><br>
+<label for="inp-21">
+<input type="checkbox" name="inp">Use a C-PAP Machine</input></label><br>
+<label for="inp-22">
+<input type="checkbox" name="inp">Thyroid Problems</input></label><br>
+<label for="inp-23">
+<input type="checkbox" name="inp">TUberculosis</input></label><br>
+<label for="inp-24">
+<input type="checkbox" name="inp">Venereal Disease</input></label><br>
+<label for="inp-25">
+<input type="checkbox" name="inp">Neurological Disorders</input></label><br>
+<label for="inp-26">
+<input type="checkbox" name="inp">Bleeding Disorders</input></label><br>
+<label for="inp-27">
+<input type="checkbox" name="inp">Lung Disease</input></label><br>
+<label for="inp-28">
+<input type="checkbox" name="inp">Emphysema</input></label><br>
+</div>
+<div class="form-control">
+    <label for="Reson">
+        <h3>Other illnesses:</h3>
+    </label>
+    <textarea name="Reason" rows="4" cols="40" id="illnesses"></textarea>
+</div>
+<div class="form-control">
+    <label for="Reson">
+        <h3>Please list any Operations and Dates of Each</h3>
+    </label>
+    <textarea name="Reason" rows="10" cols="50" id="Operations"></textarea>
+</div>
+<div class="form-control">
+    <label for="Reson">
+        <h3>Please list your Current Medications</h3>
+    </label>
+    <textarea name="Reason" rows="10" cols="50" id="Currentmedications"></textarea>
+</div>
+<div class="form-control">
+    <label for="files">
+        <h3>Upload Test Reports</h3>
+    </label>
+    <label for="myfile">Select files:</label>
+    <input type="file" id="myfile" name="myfile" multiple><br>
+</div>
+<br>
+<hr>
+<h1><u>Healthy & Unhealthy Habits</u></h1>
+<hr>
+<br>
+<div class="form-control">
+    <h3>Alcohol Consumption</h3>
+    <input type="radio" id="dont" name="drink" value="dont"></input>
+    <label for="dont">I don't drink</label><br>
+    <input type="radio" id="12glass" name="drink" value="12glass"></input>
+    <label for="12glass">1-2 glasses/day</label><br>
+    <input type="radio" id="34glass" name="drink" value="34glass"></input>
+    <label for="34glass">3-4 glasses/day</label><br>
+    <input type="radio" id="5glass" name="drink" value="5glass"></input>
+    <label for="5glass">5+ glasses/day</label>
+    <br>
+    <legend>
+        <h3>Do you smoke?</h3>
+    </legend>
+    <label class="choice"><input type="radio" name="inp">No</input></label><br>
+    <label class="choice"><input type="radio" name="inp">0-1 pack/day</input></label><br>
+    <label class="choice"><input type="radio" name="inp">1-2 cups/day</input></label><br>
+    <label class="choice"><input type="radio" name="inp">2+ cups/day</input></label><br>
+</div>
+<div class="form-control">
+    <label for="Reson">
+        <h3>Include other comments regrading your Medical History</h3>
+    </label>
+    <textarea name="Reason" rows="10" cols="50" id="comments"></textarea>
+</div>
+</main>
+<footer>
+    <button>
+        <h3>submit</h3>
+    </button>
+</footer>
+</form>
+<script>
+    card_number.addEventListener('keyup', function (e){
+        if (e.keyCode !== 8){
+            if (this.value.length === 4 || this.value.length === 9 || this.value.length === 14) {
+                this.value = this.value += ' ';
+            }
+        }
+    });
+</script>
+</body>
+</html>
